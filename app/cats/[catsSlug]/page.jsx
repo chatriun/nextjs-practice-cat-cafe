@@ -1,10 +1,10 @@
-const FilmDetailPage = ({ params }) => {
+const CatDetailPage = ({ params }) => {
   return (
     <>
-      <h2>film item</h2>
-      <h3>{params.filmsSlug}</h3>
+      <h2>nong info</h2>
+      <h3>{params.catsSlug}</h3>
     </>
   );
 };
 
-export default FilmDetailPage;
+export default CatDetailPage;
