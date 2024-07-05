@@ -55,7 +55,6 @@ const images = [
 
 const Slideshow = () => {
   const [currentImageIndex, setCurrentImageIndex] = useState(0);
-  console.log(currentImageIndex);
   useEffect(() => {
     const interval = setInterval(() => {
       setCurrentImageIndex((prevIndex) =>

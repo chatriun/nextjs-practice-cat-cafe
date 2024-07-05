@@ -1,22 +1,11 @@
 import CatItem from "@/components/cats/cat-item";
+import getCats from "@/lib/cats";
 import Link from "next/link";
-import cat09 from "@/asset/cats/cat09.jpg";
 
-const INITIAL_CATS_DATA = [
-  {
-    id: "c1",
-    slug: "pak-mai-aroi",
-    name: "nong-pak",
-    age: 4,
-    gender: "male",
-    description:
-      "It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout",
-    image: cat09,
-    owner: "ake",
-  },
-];
+const CatsPage = async () => {
+  const cats = await getCats();
 
-const CatsPage = () => {
+  console.log(cats);
   return (
     <div>
       <header
@@ -39,7 +28,7 @@ const CatsPage = () => {
       </header>
       <main>
         <ul>
-          {INITIAL_CATS_DATA.map((cat) => (
+          {cats.map((cat) => (
             <li key={cat.id}>
               <CatItem cat={cat} />
             </li>
