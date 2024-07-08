@@ -4,10 +4,8 @@ import Link from "next/link";
 const Home = () => {
   return (
     <>
-      <div
-        style={{ display: "flex", justifyContent: "space-between", gap: 20 }}
-      >
-        <div style={{ width: "400px", height: "400px" }}>
+      <div style={{ display: "flex", gap: 20 }}>
+        <div style={{ minWidth: "400px", minHeight: "400px" }}>
           <Slideshow />
         </div>
         <div
@@ -19,7 +17,9 @@ const Home = () => {
             wordBreak: "break-word",
           }}
         >
-          <h1 style={{ marginBottom: 20 }}>Welcome to Purrfect Match!</h1>
+          <h1 style={{ maxWidth: 600, marginBottom: 20 }}>
+            Welcome to Purrfect Match!
+          </h1>
           <span>
             where we specialize in bringing together feline friends in search of
             love and companionship. Our cat-tinder platform is designed to help
