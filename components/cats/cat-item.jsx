@@ -8,9 +8,8 @@ const CatItem = ({ cat }) => {
       <div
         style={{
           position: "relative",
-          width: 400,
-          height: 400,
-          // objectFit: "cover",
+          width: 200,
+          height: 200,
         }}
       >
         <Image
@@ -23,7 +22,6 @@ const CatItem = ({ cat }) => {
       <div style={{ display: "flex", flexDirection: "column" }}>
         <h2>{cat.name}</h2>
         <span style={{ marginBottom: 28 }}>owner: {cat.owner}</span>
-        <div>{cat.description}</div>
         <Link href={`/cats/${cat.slug}`} style={{ color: "blue" }}>
           view detail
         </Link>
