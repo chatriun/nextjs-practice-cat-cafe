@@ -1,11 +1,23 @@
 import CatItem from "@/components/cats/cat-item";
-import getCats from "@/lib/cats";
+import { getCats } from "@/lib/cats";
 import Link from "next/link";
+import { Suspense } from "react";
 
-const CatsPage = async () => {
+const Cats = async () => {
   const cats = await getCats();
 
-  console.log(cats);
+  return (
+    <ul>
+      {cats.map((cat) => (
+        <li key={cat.id}>
+          <CatItem cat={cat} />
+        </li>
+      ))}
+    </ul>
+  );
+};
+
+const CatsPage = () => {
   return (
     <div>
       <header
@@ -27,13 +39,15 @@ const CatsPage = async () => {
         </Link>
       </header>
       <main>
-        <ul>
-          {cats.map((cat) => (
-            <li key={cat.id}>
-              <CatItem cat={cat} />
-            </li>
-          ))}
-        </ul>
+        <Suspense
+          fallback={
+            <p style={{ textAlign: "center", marginTop: 30, marginBottom: 30 }}>
+              loading...
+            </p>
+          }
+        >
+          <Cats />
+        </Suspense>
       </main>
     </div>
   );
