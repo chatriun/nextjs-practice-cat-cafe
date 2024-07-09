@@ -2,7 +2,6 @@ import Image from "next/image";
 import Link from "next/link";
 
 const CatItem = ({ cat }) => {
-  console.log(cat.image);
   return (
     <div style={{ display: "flex", gap: 16, border: "2px solid gray" }}>
       <div
