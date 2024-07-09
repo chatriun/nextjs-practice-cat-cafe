@@ -1,3 +1,5 @@
+import ImagePicker from "@/components/cats/image-picker";
+
 const share = () => {
   return (
     <>
@@ -55,6 +57,8 @@ const share = () => {
             <label htmlFor="description">Description: </label>
             <input id="description" name="description" type="text" required />
           </div>
+          <ImagePicker />
+
           <button type="submit">submit</button>
         </form>
       </main>
