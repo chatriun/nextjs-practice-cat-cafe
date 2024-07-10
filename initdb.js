@@ -21,7 +21,7 @@ const dummyCats = [
     age: 1,
     gender: "female",
     description:
-      "It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout",
+      "Contrary to popular belief, Lorem Ipsum is not simply random text. It has roots in a piece of classical Latin literature from 45 BC, making it over 2000 years old. Richard McClintock, a Latin professor at Hampden-Sydney College in Virginia, looked up one of the more obscure Latin words, consectetur",
     image: "/images/cat03.jpg",
     owner: "jam",
     owner_email: "jamjam@gmail.com",

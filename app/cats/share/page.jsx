@@ -1,4 +1,5 @@
 import ImagePicker from "@/components/cats/image-picker";
+import { shareCat } from "@/lib/action";
 
 const share = () => {
   return (
@@ -8,7 +9,7 @@ const share = () => {
         <h5>help them find the purrfect match!</h5>
       </header>
       <main>
-        <form>
+        <form action={shareCat}>
           <div
             style={{
               display: "flex",
