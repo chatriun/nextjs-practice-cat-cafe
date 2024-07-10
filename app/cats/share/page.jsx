@@ -1,3 +1,4 @@
+import CatsFormSubmit from "@/components/cats/cats-form-submit";
 import ImagePicker from "@/components/cats/image-picker";
 import { shareCat } from "@/lib/action";
 
@@ -59,7 +60,7 @@ const share = () => {
             <input id="description" name="description" type="text" required />
           </div>
           <ImagePicker label="cat image" name="cat-image" />
-          <button type="submit">submit</button>
+          <CatsFormSubmit />
         </form>
       </main>
     </>
