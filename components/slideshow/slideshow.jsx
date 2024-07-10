@@ -4,12 +4,12 @@ import { useEffect, useState } from "react";
 import classes from "./slideshow.module.css";
 
 import cat01 from "@/asset/cats/cat01.jpg";
-// import cat02 from "@/asset/cats/cat02.jfif";
+import cat02 from "@/asset/cats/cat02.png";
 import cat03 from "@/asset/cats/cat03.jpg";
 import cat04 from "@/asset/cats/cat04.jpg";
 import cat05 from "@/asset/cats/cat05.jpg";
 import cat06 from "@/asset/cats/cat06.jpg";
-// import cat07 from "@/asset/cats/cat07.jfif";
+import cat07 from "@/asset/cats/cat07.png";
 import cat08 from "@/asset/cats/cat08.jpg";
 import cat09 from "@/asset/cats/cat09.jpg";
 import Image from "next/image";
@@ -19,10 +19,10 @@ const images = [
     image: cat01,
     alt: "white-cat-meme",
   },
-  // {
-  //   image: cat02,
-  //   alt: "cat-eating-grass",
-  // },
+  {
+    image: cat02,
+    alt: "cat-eating-grass",
+  },
   {
     image: cat03,
     alt: "call-center-cat",
@@ -39,10 +39,10 @@ const images = [
     image: cat06,
     alt: "pop-cat-meme",
   },
-  // {
-  //   image: cat07,
-  //   alt: "orange-cat",
-  // },
+  {
+    image: cat07,
+    alt: "orange-cat",
+  },
   {
     image: cat08,
     alt: "super-tired-cat",
