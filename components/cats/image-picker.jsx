@@ -46,7 +46,7 @@ const ImagePicker = ({ label, name }) => {
           id={name}
           name={name}
           type="file"
-          accept="image/png, image/jpg, image/gif"
+          accept="image/png, image/jpeg, image/gif"
           ref={imageInput}
           onChange={handleImageChange}
           style={{ display: "none" }}
