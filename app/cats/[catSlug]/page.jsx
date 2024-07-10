@@ -3,6 +3,7 @@ import Image from "next/image";
 
 const CatDetailPage = ({ params }) => {
   const cat = getCat(params.catSlug);
+  cat.description = cat.description.replace(/\n/g, "<br />");
 
   return (
     <>
@@ -12,9 +13,10 @@ const CatDetailPage = ({ params }) => {
           <p style={{ fontSize: 24, fontStyle: "italic", marginBottom: 20 }}>
             fur parent: {cat.owner}
           </p>
-          <p style={{ width: 400, wordBreak: "break-word" }}>
-            {cat.description}
-          </p>
+          <p
+            dangerouslySetInnerHTML={{ __html: cat.description }}
+            style={{ width: 400 }}
+          />
         </div>
         <div
           style={{
