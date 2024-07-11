@@ -4,7 +4,7 @@ import ImagePicker from "@/components/cats/image-picker";
 import { shareCat } from "@/lib/action";
 import { useFormState } from "react-dom";
 
-const sharePage = () => {
+const SharePage = () => {
   const [state, formAction] = useFormState(shareCat, { message: null });
   return (
     <>
@@ -71,4 +71,4 @@ const sharePage = () => {
   );
 };
 
-export default sharePage;
+export default SharePage;
