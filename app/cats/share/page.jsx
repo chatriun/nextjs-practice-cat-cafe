@@ -1,8 +1,11 @@
+"use client";
 import CatsFormSubmit from "@/components/cats/cats-form-submit";
 import ImagePicker from "@/components/cats/image-picker";
 import { shareCat } from "@/lib/action";
+import { useFormState } from "react-dom";
 
-const share = () => {
+const sharePage = () => {
+  const [state, formAction] = useFormState(shareCat, { message: null });
   return (
     <>
       <header style={{ marginBottom: 50 }}>
@@ -10,7 +13,7 @@ const share = () => {
         <h5>help them find the purrfect match!</h5>
       </header>
       <main>
-        <form action={shareCat}>
+        <form action={formAction}>
           <div
             style={{
               display: "flex",
@@ -60,6 +63,7 @@ const share = () => {
             <input id="description" name="description" type="text" required />
           </div>
           <ImagePicker label="cat image" name="cat-image" />
+          {state.message && <p>{state.message}</p>}
           <CatsFormSubmit />
         </form>
       </main>
@@ -67,4 +71,4 @@ const share = () => {
   );
 };
 
-export default share;
+export default sharePage;
