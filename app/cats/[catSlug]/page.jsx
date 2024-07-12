@@ -27,7 +27,7 @@ const CatDetailPage = ({ params }) => {
           }}
         >
           <Image
-            src={cat.image}
+            src={`https://anyaweesr-nextjs-practice-cat-tinder.s3.amazonaws.com/${cat.image}`}
             alt={cat.name}
             fill
             style={{ objectFit: "cover" }}
