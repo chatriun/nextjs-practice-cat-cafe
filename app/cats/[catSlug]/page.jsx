@@ -1,8 +1,13 @@
 import { getCat } from "@/lib/cats";
 import Image from "next/image";
+import { notFound } from "next/navigation";
 
 const CatDetailPage = ({ params }) => {
   const cat = getCat(params.catSlug);
+
+  if (!cat) {
+    notFound();
+  }
   cat.description = cat.description.replace(/\n/g, "<br />");
 
   return (
